@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #152336;
+    color: #F1F3F6;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #F1F3F6;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #0C73EB;
+}
+
+.search-bar {
+    margin-top: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+}
+
+.search-bar button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #FFC71E;
+    color: #000000;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #ffffff82;
+}
+
+.advertisements {
+    padding: 20px;
+    background-color: #F1F3F6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.ads-scroller {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.ad {
+    min-width: 250px;
+    margin-right: 20px;
+    background-color: #e6e6e6;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.ad img {
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+}
+  
+.ad h3 {
+    margin: 10px 0;
+}
+
+.ad a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.ad a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #152336;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+.college-card {
+    background-color: #e6e5e5;
+    border: 1px solid #000000;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}

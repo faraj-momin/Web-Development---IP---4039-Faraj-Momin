@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">College Finder</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="search-results">
+        <h2>Search Results</h2>
+        <div id="resultsContainer">
+           
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 College Finder. All Rights Reserved.</p>
+            <div class="social-media">
+                <a href="#">Facebook</a> |
+                <a href="#">Twitter</a> |
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const results = JSON.parse(localStorage.getItem('searchResults')) || [];
+            const resultsContainer = document.getElementById('resultsContainer');
+
+            results.forEach(college => {
+                const collegeCard = document.createElement('div');
+                collegeCard.className = 'college-card';
+
+                collegeCard.innerHTML = `
+                    <h3>${college.name}</h3>
+                    <p>${college.description}</p>
+                    <p><strong>Courses:</strong> ${college.courses}</p>
+                    <p><strong>Contact:</strong> ${college.contact}</p>
+                    <p><strong>Address:</strong> ${college.address}</p>
+                    <a href="${college.website}" target="_blank">Visit Website</a>
+                `;
+
+                resultsContainer.appendChild(collegeCard);
+            });
+
+            // Clear the search results from local storage
+            localStorage.removeItem('searchResults');
+        });
+    </script>
+</body>
+</html>
